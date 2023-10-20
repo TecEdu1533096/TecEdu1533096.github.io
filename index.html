@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+	<title>uwu</title>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>reveal.js</title>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!--Geogebra-->
+		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<style>
+			.main.tools,
+			.main.algebra {
+			margin-left: inherit;
+			background-color: #fff;
+			}
+			.GeoGebraFrame {
+			::-webkit-scrollbar-thumb {
+			background-color: #ccc;
+			background-image: unset;
+			}
+			}
+			th,
+			td {
+			min-width: unset;
+			}
+			.gwt-MenuItem {
+			&::before {
+			display: none;
+			}
+			}
+			ul.gwt-MenuBar {
+			padding-left: 0;
+			li::before {
+			display: none;
+			}
+			}
+			.geo-app {
+			position: relative;
+			width: 100%;
+			contain: content;
+			height: min-content;
+			margin: auto;
+			> div {
+			position: relative;
+			}
+			}
+			.geo-app.ratio-16-9::before {
+			float: left;
+			padding-top: 56.25%;
+			content: "";
+			}
+			.geo-app.ratio-8-3::before {
+			float: left;
+			padding-top: 37.5%;
+			content: "";
+			}
+			@media (prefers-color-scheme: dark) {
+			.geo-app::before {
+			position: absolute;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			background-color: #0007;
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+					## Conjuntos abiertos en espacios métricos
+					Aspectos teóricos ​🤔
+					</textarea>
+				</section>
+				<section data-background-gradient="linear-gradient(to bottom, #050343, #283b95)">
+					<section data-markdown data-background-color="#050343">
+						<textarea data-template>
+						## Definición 
+						Sea $A\ne\varnothing$ un conjunto y
+						\\(d:A\times A\longrightarrow \mathbb{R}\\)
+						una función.
+						Diremos que \\(d\\) es una función métrica en \\(A\\) si satisface las siguientes propiedades 🤓​
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							\\(\forall x,y\in A: d(x,y)\ge 0\\)
+
+							<p style="font-size: xx-large;" class="fragment fade-up">Es decir, la métrica es no negativa.</p>
+						</textarea>
+					</section>
+					<section data-markdown data-background-gradient=>
+						<textarea data-template>
+							\\(\forall x,y\in A: d(x,y)= 0\iff x=y\\)
+
+							<p style="font-size: xx-large;" class="fragment fade-up">Su valor es cero sí y sólo sí las entradas son idénticas.</p>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							\\(\forall x,y\in A: d(x,y)=d(y,x)\\)
+
+							<p style="font-size: xx-large;" class="fragment fade-up">Es simétrica.</p>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							\\(\forall x,y,z\in A: d(x,y)\le d(x,z)+d(y,z)\\)
+
+							<p style="font-size: xx-large;" class="fragment fade-up">Y cumple la desigualdad del triángulo.</p>
+						</textarea>
+					</section>
+				</section>
+				<section data-markdown data-background-gradient="linear-gradient(to bottom, #17b2c3, #10d8a8)">
+					<textarea data-template>
+					## Definición
+					Sea \\(A\ne\varnothing\\) y \\(d\\) una función métrica en \\(A\\). Al par ordenado \\((A,d)\\) se le llama **Espacio métrico.** 🫶​
+					</textarea>
+				</section>
+				<section data-markdown data-background-gradient="radial-gradient(#f69635,#ff00b4)">
+					<textarea data-template>
+					## Definición
+					Sea (A,d) un espacio métrico, \\(x_0\in A\\) y \\(r>0\\). Se definen los siguientes conjuntos:
+					* \\(\mathrm{B}(x_0:r)=\\{a\in A:d(a,x_0)< r\\}\\)
+					* \\(\mathrm{B}[x_0:r]=\\{a\in A:d(a,x_0)\le r\\}\\)
+					* \\(\mathrm{S}(x_0:r)=\\{a\in A:d(a,x_0)=r\\}\\)
+					Los cuales denominaremos como la bola abierta 🐣​, la bola cerrada 🎱 y la esfera 🔮​​, respectivamente, con centro en \\(x_0\\) 🎯y radio \\(r\\) 
+					</textarea>
+				</section>
+				<section>
+					<section data-markdown data-background-gradient="radial-gradient(#ff00b4,#a000ff)">
+						<textarea data-template>
+						## Definición
+						Sea (A,d) un espacio métrico, y \\(S\subseteq A\\). Diremos que \\(S\\) es un conjunto abierto sí y sólo sí
+						</textarea>
+					</section>
+					<section data-markdown data-background-gradient="radial-gradient(#ff00b4,#a000ff)">
+						<textarea data-template>
+						\\(\forall x\in S:\exists r>0:B(x:r)\subseteq S\\)😝​
+						</textarea>
+					</section>
+					<section data-markdown data-background-gradient="radial-gradient(#ff00b4,#a000ff)">
+						<textarea data-template>
+						Y \\(S\\) será cerrado sí y sólo sí su complemento es un conjunto abierto.
+						</textarea>
+					</section>
+				</section>
+				<section data-background-gradient="radial-gradient(#ff8686,#a0006b)">
+					<section data-markdown>
+						<textarea data-template>
+						## Ejercicio
+						Sea \\((A,d)\\) un espacio métrico, \\(x_0\in A\\) y \\(k>0\\). Demuestre que \\(\mathrm{B}(x_0:k)\\) es un conjunto abierto 🤪
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Demostración
+							<p class="fragment fade-up">Sea $x\in B(x_0:k)$ arbitrario pero fijo.</p><p class="fragment fade-up">Luego $d(x,x_0)< k$</p>
+							<p class="fragment fade-up">Sea $r=k-d(x,x_0)>0$</p>
+							<p class="fragment fade-up">Se tiene que</p>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<p style="text-align: left;">$u\in\mathrm{B}(x:r)\implies d(u,x)< r=k-d(x,x_0)$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in \mathrm{B}(x:r)}\implies d(u,x)+d(x,x_0)< k$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in\mathrm{B}(x:r)}\implies d(u,x_0)< k$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in \mathrm{B}(x:r)}\implies u\in \mathrm{B}(x_0:k)$</p>
+							<p class="fragment fade-up">Luego $\mathrm{B}(x_0:k)$ es un conjunto abierto.</p>
+						</textarea>
+					</section>
+					<section>
+						<div class="geo-app ratio-8-3">
+							<div id="BolaAb"></div>
+						</div>
+					</section>
+				</section>
+				<section data-background-gradient="radial-gradient(#ff8686,#a0006b)">
+					<section data-markdown>
+						<textarea data-template>
+						## Ejercicio
+						Sea \\((A,d)\\) un espacio métrico, \\(x_0\in A\\) y \\(k>0\\). Demuestre que \\(\mathrm{B}[x_0:k]\\) es un conjunto cerrado 🤪
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							## Demostración
+							<p class="fragment fade-up">Sea $x\in A-B[x_0:k]$ arbitrario pero fijo.</p><p class="fragment fade-up">Luego $d(x,x_0)> k$</p>
+							<p class="fragment fade-up">Sea $r=d(x,x_0)-k>0$</p>
+							<p class="fragment fade-up">Se tiene que</p>
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<p style="text-align: left;">$u\in\mathrm{B}(x:r)\implies d(u,x)< r=d(x,x_0)-k$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in \mathrm{B}(x:r)}\implies k< d(x,x_0)-d(u,x)$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in\mathrm{B}(x:r)}\implies k< |d(u,x)-d(x,x_0)|$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in\mathrm{B}(x:r)}\implies k< d(u,x_0)$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in \mathrm{B}(x:r)}\implies u\notin \mathrm{B}[x_0:k]$</p>
+							<p class="fragment fade-up" style="text-align: left;">$\phantom{u\in \mathrm{B}(x:r)}\implies u\in A-\mathrm{B}[x_0:k]$</p>
+							<p class="fragment fade-up">Luego $A-\mathrm{B}[x_0:k]$ es un conjunto abierto, y por ende $\mathrm{B}[x_0:k]$ es un conjunto cerrado.</p>
+						</textarea>
+					</section>
+					<section>
+						<div class="geo-app ratio-8-3">
+							<div id="BolaCe"></div>
+						</div>
+					</section>
+				</section>
+				<section data-background-gradient="radial-gradient(#ff00ac,#2e001f)">
+					<section data-markdown>
+						## Imagina
+						Sea \\(R\subseteq(0,1]\\), donde $R\ne\varnothing$. Dos jugadores \\(A\\) y \\(B\\) juegan por turnos alternadamente, comenzando por \\(A\\). En cada turno, el jugador elige un número \\(r\in R\\), y coloca un círculo de radio \\(r\\) en la región del plano dada por:
+						\\(\left\\{(x,y)\in \mathbb{R}^2\left|\sqrt{x^2+y^2}< 1 \right.\right\\}\\)
+					</section>
+					<section data-markdown>
+						Determina, para cada \\(R\\), si el juego puedo acabar en un número finito de pasos.
+						<p class="fragment fade-up">En caso afirmativo, ¿existe una estrategia ganadora para algún jugador? ¿cuál?</p>
+					</section>
+					<section data-markdown>
+						## TIP: ¿Un espacio métrico?
+						$\begin{matrix}
+						d:& \mathbb{R}^2\times\mathbb{R}^2&\longrightarrow&\mathbb{R}\\\\
+						&(u,v)&\longmapsto&\sqrt{(u-v)\cdot(u-v)}
+						\end{matrix}
+						$
+
+						es una métrica en $\mathbb{R}$.
+					</section>
+					<section data-markdown>
+						## TIP: La región
+
+						\\(\left\\{(x,y)\in \mathbb{R}^2\left|\sqrt{x^2+y^2}< 1 \right.\right\\}\\)
+
+						es un conjunto abierto
+					</section>
+					<section>
+						<div class="geo-app ratio-8-3">
+							<div id="CircUnit"></div>
+						</div>
+					</section>
+					<section data-markdown>
+						## TIP: Los círculos
+						<p>Los jugadores colocan conjuntos disjuntos y cerrados.</p>
+					</section>
+					<section data-markdown>
+						## TIP: Los conjuntos cerrados
+						La unión finita de conjuntos cerrados es cerrada.
+					</section>
+				</section>
+				<section data-background-color="black">
+				<section data-markdown ¿>
+					<textarea data-template>
+					## Finalmente
+					* Si $\inf(R)>0$, los círculos tienen un área de al menos $\pi\cdot\inf(R)^2$, por lo cual el juego termina tras un número finito de pasos. Más aún, si el jugador $A$ coloca primero su círculo en el origen, podrá reflejar en el origen el círculo de los turnos sucesivos de $B$ siempre. Por tanto $A$ tiene una estrategia ganadora.
+					</textarea>
+				</section>
+				<section>
+					<div class="geo-app ratio-8-3">
+						<div id="CircJuego"></div>
+					</div>
+				</section>
+				<section data-markdown>
+					* Si $\inf(R)=0$, entonces no puede haber un número finito de círculos cubriendo la región, pues esta es un conjunto abierto en el espacio métrico $(\mathbb{R^2},d)$. Más aún, después de cualquier número de pasos, la región no cubierta por los círculos es abierta y no vacía. Así, siempre se puede encontrar una bola abierta contenida en dicha región, que a su vez contiene a una bola cerrada cuyo radio está en $R$. Entonces no puede terminar incluso si no se cubren todos los puntos de la región. 
+				</section>
+				<section data-markdown>
+					Por tanto, el juego no termina después de un número finito de pasos en este caso.
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function perspective(p){
+				updateHelp(p);
+				ggbApplet.setPerspective(p);
+			}
+			var CircUnit = {
+					"id":"CircUnit",
+					"appName":"geometry",
+					"material_id": "mbdyqu3z",
+					"width":800,
+					"height":300,
+					"autoHeight":true,
+					"scaleContainerClass":"geo-app",
+					"allowUpscale":true,
+					"scale": 0.5,
+					"showToolBar": false,
+					"showAlgebraInput": false
+					};
+			var BolaAb = {
+					"id":"BolaAb",
+					"appName":"geometry",
+					"material_id": "vcn6uuzb",
+					"width":800,
+					"height":300,
+					"autoHeight":true,
+					"scaleContainerClass":"geo-app",
+					"allowUpscale":true,
+					"scale": 0.5,
+					"showToolBar": false,
+					"showAlgebraInput": false
+					};
+			var BolaCe = {
+					"id":"BolaCe",
+					"appName":"geometry",
+					"material_id": "scsmbyhf",
+					"width":800,
+					"height":300,
+					"autoHeight":true,
+					"scaleContainerClass":"geo-app",
+					"allowUpscale":true,
+					"scale": 0.5,
+					"showToolBar": false,
+					"showAlgebraInput": false
+					};
+			var CircJuego = {
+					"id":"CircJuego",
+					"appName":"geometry",
+					"material_id": "wq8hshfa",
+					"width":800,
+					"height":300,
+					"autoHeight":true,
+					"scaleContainerClass":"geo-app",
+					"allowUpscale":true,
+					"scale": 0.5,
+					"showToolBar": false,
+					"showAlgebraInput": false
+					};
+			var appletCircUnit = new GGBApplet(CircUnit, '6.0', 'CircUnit');
+			var appletBolaAb = new GGBApplet(BolaAb, '6.0', 'BolaAb');
+			var appletBolaCe = new GGBApplet(BolaCe, '6.0', 'BolaCe');
+			var appletCircJuego = new GGBApplet(CircJuego, '6.0', 'CircJuego');
+			window.onload = function() { 
+			  appletCircUnit.inject('CircUnit');
+			  appletBolaAb.inject('BolaAb');
+			  appletBolaCe.inject('BolaCe');
+			  appletCircJuego.inject('CircJuego');
+			}
+		</script>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				mathjax3: {
+			 			mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+			 			tex: {
+			   			inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+			 			},
+			 			options: {
+			   			skipHtmlTags: [ 'script', 'noscript', 'style', 'pre' ]
+			 				},
+						},
+				transition: "convex",
+				backgroundTransition: "convex",
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+			});
+		</script>
+	</body>
+</html>
