@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 		<!--Geogebra-->
 		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+		<script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script>
 		<style>
 			.main.tools,
 			.main.algebra {
@@ -90,6 +91,19 @@
 					<textarea data-template>
 					## Innovación en la evaluación del aprendizaje de las matemáticas utilizando las TICS
 					</textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Evaluación inicial
+							Contesta estas 5 preguntas...
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							<a data-quiz="Q250Y0CU4" data-type=4 href="https://take.quiz-maker.com/Q250Y0CU4">Loading...</a>
+						</textarea>					
+					</section>
 				</section>
 				<section data-background-gradient="linear-gradient(to bottom, #050343, #283b95)">
 					<section data-markdown data-background-color="#050343">
@@ -205,100 +219,8 @@
 					<section>
 						<iframe border="0" loading="lazy" src="https://es.educaplay.com/recursos-educativos/16773934-rellena_los_espacios_uso_de_la_tecnologia_para_las_evaluaciones.html" style="min-width: 50vw; min-height: 100vh;"></iframe>
 					</section>
-
-					<section>
-						<a data-quiz="Q250Y0CU4" data-type=4 href="https://take.quiz-maker.com/Q250Y0CU4">Loading...</a><script>(function(i,s,o,g,r,a,m){var ql=document.querySelectorAll('A[quiz],DIV[quiz],A[data-quiz],DIV[data-quiz]'); if(ql){if(ql.length){for(var k=0;k<ql.length;k++){ql[k].id='quiz-embed-'+k;ql[k].href="javascript:var i=document.getElementById('quiz-embed-"+k+"');try{qz.startQuiz(i)}catch(e){i.start=1;i.style.cursor='wait';i.style.opacity='0.5'};void(0);"}}};i['QP']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://take.quiz-maker.com/3012/CDN/quiz-embed-v1.js','qp');</script>
-					</section>
 				</section>
 				<section data-background-gradient="radial-gradient(#ff00ac,#2e001f)">
-					<section data-markdown>
-						## Imagina
-						Sea \\(R\subseteq(0,1]\\), donde $R\ne\varnothing$. Dos jugadores \\(A\\) y \\(B\\) juegan por turnos alternadamente, comenzando por \\(A\\). En cada turno, el jugador elige un número \\(r\in R\\), y coloca un círculo de radio \\(r\\) en la región del plano dada por:
-						\\(\left\\{(x,y)\in \mathbb{R}^2\left|\sqrt{x^2+y^2}< 1 \right.\right\\}\\)
-					</section>
-					<section data-markdown>
-						Determina, para cada \\(R\\), si el juego puedo acabar en un número finito de pasos.
-						<p class="fragment fade-up">En caso afirmativo, ¿existe una estrategia ganadora para algún jugador? ¿cuál?</p>
-					</section>
-					<section data-markdown>
-						## TIP: ¿Un espacio métrico?
-						$\begin{matrix}
-						d:& \mathbb{R}^2\times\mathbb{R}^2&\longrightarrow&\mathbb{R}\\\\
-						&(u,v)&\longmapsto&\sqrt{(u-v)\cdot(u-v)}
-						\end{matrix}
-						$
-
-						es una métrica en $\mathbb{R}$.
-					</section>
-					<section data-markdown>
-						## TIP: La región
-
-						\\(\left\\{(x,y)\in \mathbb{R}^2\left|\sqrt{x^2+y^2}< 1 \right.\right\\}\\)
-
-						es un conjunto abierto
-					</section>
-					<section>
-						<div class="geo-app ratio-8-3">
-							<div id="CircUnit" style="width: max-width;"></div>
-						</div>
-					</section>
-					<section data-markdown>
-						## TIP: Los círculos
-						<p>Los jugadores colocan conjuntos disjuntos y cerrados.</p>
-					</section>
-					<section data-markdown>
-						## TIP: Los conjuntos cerrados
-						La unión finita de conjuntos cerrados es cerrada.
-					</section>
-				</section>
-				<section data-background-color="black">
-				<section data-markdown ¿>
-					<textarea data-template>
-					## Finalmente
-					* Si $\inf(R)>0$, los círculos tienen un área de al menos $\pi\cdot\inf(R)^2$, por lo cual el juego termina tras un número finito de pasos. Más aún, si el jugador $A$ coloca primero su círculo en el origen, podrá reflejar en el origen el círculo de los turnos sucesivos de $B$ siempre. Por tanto $A$ tiene una estrategia ganadora.
-					</textarea>
-				</section>
-				<section>
-					<div class="geo-app ratio-8-3">
-						<div id="CircJuego"></div>
-					</div>
-				</section>
-				<section data-markdown>
-					* Si $\inf(R)=0$, entonces no puede haber un número finito de círculos cubriendo la región, pues esta es un conjunto abierto en el espacio métrico $(\mathbb{R^2},d)$. Más aún, después de cualquier número de pasos, la región no cubierta por los círculos es abierta y no vacía. Así, siempre se puede encontrar una bola abierta contenida en dicha región, que a su vez contiene a una bola cerrada cuyo radio está en $R$. Entonces no puede terminar incluso si no se cubren todos los puntos de la región. 
-				</section>
-				<section data-markdown>
-					Por tanto, el juego no termina después de un número finito de pasos en este caso.
-				</section>
-				<section>
-					<div>
-						<script data-quiz>
-							quiz = {
-									"info": {
-											"name":    "Test Your Knowledge!!",
-											"main":    "Think you're smart enough to be on Jeopardy? Find out with this super crazy knowledge quiz!",
-											"level1":  "Jeopardy Ready",
-											"level2":  "Jeopardy Contender",
-											"level3":  "Jeopardy Amateur",
-											"level4":  "Jeopardy Newb",
-											"level5":  "Stay in school, kid..." // no comma here
-									},
-									"questions": [
-											{ // Question 1 - Multiple Choice, Single True Answer
-													"q": "What number is the letter A in the English alphabet?",
-													"a": [
-															{"option": "8",      "correct": false},
-															{"option": "14",     "correct": false},
-															{"option": "1",      "correct": true},
-															{"option": "23",     "correct": false} // no comma here
-													],
-													"correct": "<p><span>That's right!</span> The letter A is the first letter in the alphabet!</p>",
-													"incorrect": "<p><span>Uhh no.</span> It's the first letter of the alphabet. Did you actually <em>go</em> to kindergarden?</p>" // no comma here
-											},
-											// more questions here
-									]
-							}
-						</script>
-					</div>
 				</section>
 			</div>
 		</div>
