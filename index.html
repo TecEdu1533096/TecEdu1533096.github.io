@@ -9,6 +9,10 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<!--RevealDrawer-->
+		<script src="plugin/drawer/drawer.js"></script>
+		<link rel="stylesheet" href="plugin/drawer/drawer.css" />
 		<!--Geogebra-->
 		<script src="https://www.geogebra.org/apps/deployggb.js"></script>
 
@@ -380,7 +384,7 @@
 				transition: "convex",
 				backgroundTransition: "convex",
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+				plugins: [ RevealDrawer, RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
 				dependencies: [
         			// other dependencies
         			{ src: 'plugin/quiz/js/quiz.js', async: true, callback: function() { prepareQuizzes({}); } }
